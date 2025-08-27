@@ -1,4 +1,1507 @@
 const questions = [
+
+  {
+    "question": "If L[y(t)] = Y(s), then L [ t dy/dt ] is equal to:",
+    "options": [
+      "Y(s) - s y'(s)",
+      "y(s) - s Y'(s)",
+      "-Y(s) - s Y'(s)",
+      "-y(s) - s y'(s)"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "If f(t) = t cos t, then L [ ∫₀^t f(t) dt ] is:",
+    "options": [
+      "(s²-1)/[s(s²+2s+2)]",
+      "(s-1)/(s³+2s²+2s)",
+      "(s²-1)/(s²+2s+1)²",
+      "(s-1)/(s³-2s²+2s)"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "The inverse Laplace transform of k e^{-α s}/(s² + k²) is:",
+    "options": [
+      "sin(kt)",
+      "cos(kt)",
+      "H(t-a) sin(kt)",
+      "None of these"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "If f(t) = sin t, then the Laplace transform of its derivative f'(t) is:",
+    "options": [
+      "-1/(1+s²)",
+      "1/(1+s²)",
+      "-2s/(1+s²)²",
+      "2s/(1+s²)²"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "The Laplace transform of the function f(t) = 1 is:",
+    "options": [
+      "1/s, for s > 0",
+      "1/s², for s > 0",
+      "1, for all s",
+      "1/(s-1), for s > 1"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "The inverse Laplace transform of 1/s² is:",
+    "options": [
+      "δ(t)",
+      "u(t)",
+      "t",
+      "t²/2"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "The First Shifting Theorem (First Translation Theorem) states that if L[f(t)] = F(s), then:",
+    "options": [
+      "L[e^{at}f(t)] = F(s - a)",
+      "L[e^{-at}f(t)] = F(s + a)",
+      "L[e^{at}f(t)] = F(s + a)",
+      "L[e^{-at}f(t)] = F(s - a)"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "The Laplace transform of f(t) = cosh(at) is:",
+    "options": [
+      "s/(s² - a²)",
+      "a/(s² - a²)",
+      "s/(s² + a²)",
+      "a/(s² + a²)"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "The function Γ(7/2)/s^{7/2} is the Laplace transform of:",
+    "options": [
+      "t^{7/2}",
+      "t^{5/2}",
+      "t^{3/2}",
+      "t^{9/2}"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "The Laplace transform of the integral ∫₀^t f(τ) dτ is:",
+    "options": [
+      "s F(s)",
+      "F(s)/s",
+      "F(s) - f(0)",
+      "(F(s) - f(0))/s"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "The inverse Laplace transform of 5/(s² + 25) is:",
+    "options": [
+      "cos(5t)",
+      "sin(5t)",
+      "sin(5t)/5",
+      "5 sin(t)"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "The Laplace transform of f(t) = tⁿ, where n is a positive integer, is:",
+    "options": [
+      "n!/sⁿ",
+      "n!/s^{n+1}",
+      "(n-1)!/sⁿ",
+      "1/s^{n+1}"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "The value of L[δ(t)], the Laplace transform of the unit impulse function at zero, is:",
+    "options": [
+      "0",
+      "1",
+      "1/s",
+      "e^{-s}"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "The inverse Laplace transform of e^{-3s}/s² is:",
+    "options": [
+      "(t-3) u(t-3)",
+      "t u(t-3)",
+      "(t-3) δ(t-3)",
+      "t e^{-3t}"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "The Laplace transform of f(t) = e^{-2t} sin(3t) is:",
+    "options": [
+      "3/((s+2)² + 9)",
+      "(s+2)/((s+2)² + 9)",
+      "3/(s²+4)",
+      "s/(s²+4s+13)"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "If two functions f and g are piecewise continuous on [0, ∞), then the convolution (f * g)(t) is defined as:",
+    "options": [
+      "∫₀^t f(τ) g(t-τ) dτ",
+      "∫₀^t f(t-τ) g(τ) dτ",
+      "∫₀^∞ f(τ) g(t) dτ",
+      "Both a and b"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "The Convolution Theorem states that:",
+    "options": [
+      "L[(f * g)(t)] = F(s) + G(s)",
+      "L[(f * g)(t)] = F(s) G(s)",
+      "L[f(t) g(t)] = F(s) * G(s)",
+      "L[f(t) g(t)] = F(s) G(s)"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "The inverse Laplace transform of s/((s² + a²)²) is:",
+    "options": [
+      "t sin(at)/(2a)",
+      "t cos(at)/2",
+      "(sin(at) - at cos(at))/(2a)",
+      "t sinh(at)/(2a)"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "The Laplace transform of f(t) = 1/√(πt) is:",
+    "options": [
+      "1/√s",
+      "1/s",
+      "√s",
+      "1/(s√s)"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "The solution procedure for a linear differential equation using Laplace transforms involves:",
+    "options": [
+      "Transforming the DE into an algebraic equation, solving it, and then finding the inverse transform.",
+      "Integrating the DE directly and then applying the initial conditions.",
+      "Finding the complementary function and particular integral.",
+      "Using the method of variation of parameters."
+    ],
+    "answer": 0
+  },
+  {
+    "question": "The Laplace transform of the second derivative y''(t) incorporates the initial conditions:",
+    "options": [
+      "y(0) only",
+      "y'(0) only",
+      "Both y(0) and y'(0)",
+      "Neither y(0) nor y'(0)"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "The function s/(s² - 9) is the Laplace transform of:",
+    "options": [
+      "cos(3t)",
+      "sin(3t)",
+      "cosh(3t)",
+      "sinh(3t)"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "The inverse Laplace transform of 1/[s(s² + 1)] can be found using:",
+    "options": [
+      "Partial fractions",
+      "The convolution theorem",
+      "Completing the square",
+      "Either a or b"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "The Laplace transform is particularly useful for solving differential equations because it:",
+    "options": [
+      "Always gives a real-valued solution.",
+      "Handles initial value problems by incorporating initial conditions automatically.",
+      "Can only be used for linear equations with constant coefficients.",
+      "Is simpler than all other methods."
+    ],
+    "answer": 1
+  },
+  {
+    "question": "The Laplace transform of a constant function f(t) = c is:",
+    "options": [
+      "c/s",
+      "c/s²",
+      "c",
+      "c e^{-s}"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "The function F(s) = (2s+5)/(s²+4s+13) can be inverted by first:",
+    "options": [
+      "Using partial fractions",
+      "Completing the square in the denominator",
+      "Applying the derivative of a transform property",
+      "Using the convolution integral"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "The Laplace transform of f(t) = u(t - a), the unit step function, is:",
+    "options": [
+      "e^{-as}/a",
+      "e^{-as}/s",
+      "e^{as}/s",
+      "1/(s - a)"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "The inverse Laplace transform of e^{-s}/(s + 2) is:",
+    "options": [
+      "e^{-2(t-1)} u(t-1)",
+      "e^{-2t} u(t-1)",
+      "e^{-2(t+1)} u(t)",
+      "e^{-2t} δ(t-1)"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "The Laplace transform of f(t) = t e^{at} is:",
+    "options": [
+      "1/(s - a)²",
+      "1/(s + a)²",
+      "s/(s - a)²",
+      "a/(s - a)²"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "The initial value theorem states that lim_{t→0⁺} f(t) = :",
+    "options": [
+      "lim_{s→0} s F(s)",
+      "lim_{s→∞} s F(s)",
+      "lim_{s→0} F(s)",
+      "lim_{s→∞} F(s)"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "The final value theorem states that lim_{t→∞} f(t) = , provided the limits exist:",
+    "options": [
+      "lim_{s→0} s F(s)",
+      "lim_{s→∞} s F(s)",
+      "lim_{s→0} F(s)",
+      "lim_{s→∞} F(s)"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "The Laplace transform of f(t) = d/dt(sin t) is:",
+    "options": [
+      "s/(s²+1)",
+      "1/(s²+1)",
+      "-s/(s²+1)²",
+      "2s/(s²+1)²"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "The function F(s) = ln(s/(s+1)) can be inverted using the property:",
+    "options": [
+      "L[t f(t)] = -d/ds F(s)",
+      "L[f(t)/t] = ∫_s^∞ F(u) du",
+      "L[e^{-t}f(t)] = F(s+1)",
+      "The convolution theorem"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "The Laplace transform of f(t) = sin(at + b) is:",
+    "options": [
+      "(a cos b + s sin b)/(s²+a²)",
+      "(s sin b - a cos b)/(s²+a²)",
+      "(s cos b + a sin b)/(s²+a²)",
+      "(a sin b + s cos b)/(s²+a²)"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "The inverse Laplace transform of 1/(s² - 4s + 8) is found by:",
+    "options": [
+      "Partial fractions",
+      "Completing the square: (s-2)² + 4",
+      "Completing the square: (s-2)² + 2",
+      "Using the derivative property"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "The Laplace transform is a linear operation. This means:",
+    "options": [
+      "L[f(t) + g(t)] = L[f(t)] + L[g(t)]",
+      "L[c f(t)] = c L[f(t)]",
+      "Both a and b",
+      "L[f(t) g(t)] = L[f(t)] L[g(t)]"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "The function f(t) = Σ_{n=0}^∞ δ(t - nT) represents:",
+    "options": [
+      "A sinusoidal wave",
+      "A square wave",
+      "An impulse train",
+      "A decaying exponential"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "The Laplace transform of the function in question 87 is:",
+    "options": [
+      "1/(1 - e^{-Ts})",
+      "1/(1 + e^{-Ts})",
+      "1/(1 - e^{Ts})",
+      "1/[s(1 - e^{-Ts})]"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "The Laplace transform of f(t) = erfc(a/(2√t)) (the complementary error function) is:",
+    "options": [
+      "(1/s) e^{-a√s}",
+      "(1/s) e^{a√s}",
+      "e^{-a√s}",
+      "(1/√s) e^{-a√s}"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "The unit step function u(t - a) is used to:",
+    "options": [
+      "Represent a sudden jump in a function at t = a",
+      "Turn another function 'on' at time t = a",
+      "Write piecewise functions in a single line",
+      "All of the above"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "The inverse Laplace transform of s/((s² + 4)²) is:",
+    "options": [
+      "(1/4) t sin(2t)",
+      "(1/2) t cos(2t)",
+      "(1/4) sin(2t)",
+      "(1/2) sin(2t)"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "The Laplace transform of f(t) = J₀(at), the Bessel function of the first kind of order zero, is:",
+    "options": [
+      "1/√(s² + a²)",
+      "1/(s + a)",
+      "1/√(s² - a²)",
+      "a/(s² + a²)"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "The function Γ(n) (Gamma function) for a positive integer n is equal to:",
+    "options": [
+      "n!",
+      "(n-1)!",
+      "n • (n-1)!",
+      "1/n!"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "The Laplace transform of f(t) = 1/√t is:",
+    "options": [
+      "√(π/s)",
+      "√π / s",
+      "π / √s",
+      "1 / √(π s)"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "The inverse Laplace transform of (1/s) e^{-1/s} is:",
+    "options": [
+      "J₀(2√t)",
+      "I₀(2√t) (Modified Bessel function)",
+      "u(t - 1)",
+      "δ(t - 1)"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "The Laplace transform of the integral ∫₀^t sin(τ) dτ is:",
+    "options": [
+      "1/[s(s² + 1)]",
+      "1/(s² + 1)",
+      "s/(s² + 1)",
+      "(1/s) • (1/(s² + 1))"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "The function F(s) = s/[(s²+1)(s²+4)] can be inverted using:",
+    "options": [
+      "Partial fractions",
+      "The convolution theorem with cos t and cos 2t",
+      "Trigonometric identities",
+      "All of the above"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "The Laplace transform method is most effective for solving:",
+    "options": [
+      "Nonlinear differential equations",
+      "Partial differential equations",
+      "Linear ordinary differential equations with constant coefficients",
+      "Differential equations with variable coefficients"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "The inverse Laplace transform of 1/[s² (s² + a²)] is:",
+    "options": [
+      "t/a - sin(at)/a²",
+      "t/a² - sin(at)/a³",
+      "t/a³ - sin(at)/a²",
+      "t - (1/a) sin(at)"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "The primary reason for using the Laplace transform in engineering is to:",
+    "options": [
+      "Analyze the frequency response of a system.",
+      "Convert a differential equation into an easier algebraic problem.",
+      "Find the particular solution of a differential equation.",
+      "Calculate the work done by a force."
+    ],
+    "answer": 1
+  },
+
+  {
+    "question": "The Laplace transform of a function f(t) is formally defined as:",
+    "options": [
+      "F(t) = ∫₀^∞ e^{-st} f(s) ds",
+      "F(s) = ∫₀^∞ e^{-st} f(t) dt",
+      "f(s) = ∫₀^∞ e^{-st} F(t) dt",
+      "F(s) = ∫_{-∞}^∞ e^{-st} f(t) dt"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "The Laplace transform of the Dirac delta function, δ(t - a), is:",
+    "options": [
+      "e^{as}",
+      "e^{-as}",
+      "e^{δs}",
+      "1"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "What is the Laplace transform of the function f(t) = 2^t?",
+    "options": [
+      "1 / log(2)",
+      "1 / (s - log(2))",
+      "log(2) / (s - 2)",
+      "log(s - 2)"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "The Laplace transform of the unit step function u(t - a) or H(t - a) is:",
+    "options": [
+      "e^{-as} / s²",
+      "e^{-as} / s",
+      "e^{-as} / (s - a)",
+      "e^{-as} / (t - a)"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Find the inverse Laplace transform: L⁻¹[1]",
+    "options": [
+      "u(t)",
+      "1",
+      "δ(t)",
+      "Doesn't exist"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "The Laplace transform of f(t) = t² cosh(πt) is:",
+    "options": [
+      "1/(s-π)³ + 1/(s+π)³",
+      "1/(s-π)³ - 1/(s+π)³",
+      "1/(s+π)³ - 1/(s-π)³",
+      "None of these"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "If L[f(t)] = F(s), then L[tⁿ f(t)] is given by:",
+    "options": [
+      "(-1) d/ds {F(s)}",
+      "(-1)ⁿ d/ds {F(s)}",
+      "(-1) dⁿ/dsⁿ {F(s)}",
+      "(-1)ⁿ dⁿ/dsⁿ {F(s)}"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "The inverse Laplace transform of 1/(s - log a) is:",
+    "options": [
+      "e^{at}",
+      "a^t",
+      "e^{log a}",
+      "t^a"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Find the Laplace transform of f(t) = t sin(3t):",
+    "options": [
+      "3/(s² + 9)",
+      "3s/(s² + 3)²",
+      "6s/(s² + 3)²",
+      "6s/(s² + 9)²"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "The Laplace transform of a periodic function f(t) with period T is:",
+    "options": [
+      "1/(1 - e^{-Ts}) ∫₀^T e^{-st} f(t) dt",
+      "1/(1 - e^{-Ts}) ∫₀^∞ e^{-st} f(t) dt",
+      "1/(1 - e^{-as}) ∫₀^T e^{-st} f(t) dt",
+      "1/(1 - e^{-ts}) ∫₀^∞ e^{-st} f(t) dt"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "If y(t) is the solution of dy/dt - 2y = 4 with y(0) = 1, then y(t) is:",
+    "options": [
+      "3e^{-2t} - 2",
+      "3e^{2t} - 2",
+      "2e^{3t} - 3",
+      "2e^{2t} - 2"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "The convolution of e^t and t is:",
+    "options": [
+      "e^t - t - 1",
+      "e^{-t} - t - 1",
+      "e^t + t + 1",
+      "e^{-t} + t + 1"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Find L⁻¹ [1/((s+2)(s+3))]:",
+    "options": [
+      "e^{-t} - e^{-3t}",
+      "e^{-2t} + e^{3t}",
+      "e^{-2t} - e^{3t}",
+      "e^{-2t} - e^{-3t}"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "The Laplace transform of f(t) = (3t + 2)² is:",
+    "options": [
+      "3/s² + 2/s",
+      "9/s³ + 6/s² + 2/s",
+      "18/s³ + 12/s² + 4/s",
+      "18/s³ + 18/s² + 4/s"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Find the inverse Laplace transform: L⁻¹ [1/(s² + 64)]",
+    "options": [
+      "cos(8t)",
+      "cosh(8t)",
+      "sin(8t)",
+      "sin(8t)/8"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "If F(s) = (3s+4)/(s²+9), then the inverse Laplace transform f(t) is:",
+    "options": [
+      "3 sin(3t) + 2 cos(3t)",
+      "3 cos(3t) + (4/3) sin(3t)",
+      "3 cos(3t) + (1/3) sin(3t)",
+      "3 sin(3t) + (4/3) cos(3t)"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "The Laplace transform of f(t) = sin(t) / e^{-5t} is:",
+    "options": [
+      "1/(s² + 5s + 25)",
+      "s/(s² + 10s + 26)",
+      "s/(s² + 5s + 25)",
+      "1/(s² + 10s + 26)"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Find L [ t^{4/3} ]:",
+    "options": [
+      "(1/3)! / s^{7/3}",
+      "Γ(4/3) / s^{7/3}",
+      "4Γ(1/3) / (9s^{7/3})",
+      "Γ(4/3) / (3s^{7/3})"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "The Laplace transform of f(t) = sin²(2t) cos(t) is:",
+    "options": [
+      "(1/4) [ 2s/(s²+1) - s/(s²+25) - s/(s²+9) ]",
+      "(1/4) [ s/(s²+1) - s/(s²+25) - 9/(s²+9) ]",
+      "(1/4) [ s/(s²+1) - s/(s²+25) - s/(s²+9) ]",
+      "(1/4) [ s/(s²+1) - 3/(s²+9) - 5/(s²+25) ]"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "If L[y(t)] = Y(s), then L[y''(t)] is:",
+    "options": [
+      "s² y(s) - s y'(0) - y(0)",
+      "s² Y(s) - s y'(0) - y(0)",
+      "s² Y(s) - s Y'(0) - Y(0)",
+      "s² Y(s) - s y(0) - y'(0)"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Find L⁻¹ [ s e^{-2s} / (s²-4) ]:",
+    "options": [
+      "cos(2(t-2)) u(t-2)",
+      "cosh(2(t-2)) u(t-2)",
+      "sin(2(t-2)) u(t-2)",
+      "sinh(2(t-2)) u(t-2)"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "The Laplace transform of f(t) = e^{-7t} cos(t) is:",
+    "options": [
+      "(s+7)/((s+7)²+1)",
+      "s e^{-7t}/(s²+7)",
+      "(s-7)/((s-7)²+1)",
+      "None of these"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Find L⁻¹ [1/(s-7)]:",
+    "options": [
+      "e^{7t}",
+      "e^{-7t}",
+      "e^{at}",
+      "None of these"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "The Laplace transform of f(t) = t³ is:",
+    "options": [
+      "3/s⁴",
+      "3!/s⁴",
+      "4!/s⁴",
+      "1/s⁴"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "If f(t) = 1 - e^t, then L[f(t)/t] is:",
+    "options": [
+      "1/s - 1/(s+1)",
+      "1/s + 1/(s-1)",
+      "log((s+1)/s)",
+      "log((s-1)/s)"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Find L⁻¹ [2/s]:",
+    "options": [
+      "1/2",
+      "1",
+      "2",
+      "None of these"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "The Laplace transform of f(t) = t cos(4t) is:",
+    "options": [
+      "(s²-16)/(s²+16)",
+      "(s²-16)/((s²+16)²)",
+      "(s²+16)/((s²-16)²)",
+      "None of these"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Find L [ sin(2t)/t ]:",
+    "options": [
+      "-tan(2/s)",
+      "tan⁻¹(2/s)",
+      "cot(2/s)",
+      "tan⁻¹(s/2)"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "If f(t) = e^t sin(4t), then L[t f(t)] is:",
+    "options": [
+      "(8s-8)/(s²-2s+17)²",
+      "(8s-1)/(s²-2s+17)²",
+      "(4s-1)/(s²-2s+17)²",
+      "(4s-4)/(s²-2s+17)²"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Find L⁻¹ [1/s]:",
+    "options": [
+      "t",
+      "t²",
+      "1/t",
+      "1"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "The function defined by f(t) = { 0, 0≤t<2; 3, t>2 } has the Laplace transform:",
+    "options": [
+      "3e^{-2s}/s",
+      "3e^{2s}/s",
+      "-3e^{2s}/s",
+      "0"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Find L [ e^{-3/2 t} ]:",
+    "options": [
+      "e^{3/2 t}/(s + 3/2)",
+      "1/(2s+3t)",
+      "e^{-3t}/(s+3)",
+      "2/(2s+3)"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "If y(t) is the solution of y' + 3y = 0 with y(0)=2, then L[y(t)] is:",
+    "options": [
+      "2/(s+3)",
+      "3/(s+2)",
+      "1/(s+1)",
+      "None"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Find L⁻¹ [ ln((s+2)/(s-5)) ]:",
+    "options": [
+      "(1/t)[e^{2t} - e^{-5t}]",
+      "-(1/t)[e^{-2t} + e^{5t}]",
+      "-(1/t)[e^{-2t} - e^{5t}]",
+      "-(1/t)[e^{2t} - e^{-5t}]"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "The Laplace transform of f(t) = t^{5/2} is:",
+    "options": [
+      "(15/8) √π / s^{-7/2}",
+      "-(15/8) √π / s^{7/2}",
+      "(15/8) √π / s^{7/2}",
+      "-(15/8) √π / s^{-7/2}"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Find L⁻¹ [1/(s+1)²]:",
+    "options": [
+      "t e^{t}",
+      "-t e^{t}",
+      "t² e^{-t}",
+      "t e^{-t}"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "The Laplace transform of f(t) = t sin(2t) is:",
+    "options": [
+      "4s/(s²+4)",
+      "4s/((s²+4)²)",
+      "4s/((s+4)²)",
+      "-4s/(s²+4)"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "If f(t) = sin t, then L [ e^t f(t) / t ] is:",
+    "options": [
+      "cot⁻¹(s-1)",
+      "tan⁻¹(s+1)",
+      "tan⁻¹(s-1)",
+      "cot⁻¹(s+1)"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Find L⁻¹ [ s/(s² - 8) ]:",
+    "options": [
+      "sinh(8t)/8",
+      "cosh(8t)",
+      "sinh(2√2 t)",
+      "cosh(2√2 t)"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "The Laplace transform of f(t) = 100^t + 2t^{10} is:",
+    "options": [
+      "1/(s-100) + (2•10!)/s^{11}",
+      "1/(s+100) + 20!/s^{11}",
+      "1/(s - logₑ(100)) + 20!/s^{11}",
+      "1/(s - 2 logₑ(10)) + (2•10!)/s^{11}"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Find L [ t e^{-2t} sin t ]:",
+    "options": [
+      "2(s+a)/[(s+a)²+1]²",
+      "2(s+a)/[(s+2)²+1]²",
+      "2(s+2)/[(s+2)²+1]²",
+      "None of these"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "If f(t) = (1-cos(4t))/t, then its Laplace transform is:",
+    "options": [
+      "s log(s)/√(s²+16)",
+      "(1/2) log((s²+16)/s²)",
+      "-s log(s)/√(s²+16)",
+      "-log(s)/√(s²+16)"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Find L⁻¹ [ (3s²+4)/(s(s²+4)) ]:",
+    "options": [
+      "1 - 2 cos(2t)",
+      "1 + 2 cos(2t)",
+      "0",
+      "2 cos(2t) - t"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "The Laplace transform of f(t) = e^{-3t} t^{3/2} is:",
+    "options": [
+      "2√π / [4(s+3)^{5/2}]",
+      "3√π / [4(s+3)^{5/2}]",
+      "3!√π / [4(s+3)^{5/2}]",
+      "2!√π / [4(s+3)^{5/2}]"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "For the function f(t) = { t-1, 0≤t≤1; 2, t>1 }, the Laplace transform is:",
+    "options": [
+      "(1/s²)(2e^{-s} - e^{-s} - s + 1)",
+      "1/[s(s² - s - e^{-s} - s e^{-s})]",
+      "(1/s)(s² - s - e^{-s} - s e^{-s})",
+      "1/[s(s² - 2s - e^{-s} - s e^{-s})]"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Find L [ ∫₀^t t e^{-2t} dt ]:",
+    "options": [
+      "1/(s+2)²",
+      "1/[s(s+2)]",
+      "1/[s(s+2)²]",
+      "None of these"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "The Laplace transform of f(t) = { t/k, t<k; 1, t>k } is:",
+    "options": [
+      "-(e^{-ks}/s²)[s + 1/k]",
+      "(k e^{-ks}/s²)[ks + 1]",
+      "(1/(k s²))[1 - e^{-ks}]",
+      "(e^{-ks}/s²)[s + 1/k]"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Find L [ ∫₀^t e^{2t} sin t dt ]:",
+    "options": [
+      "1/[s((s+2)²+1)]",
+      "1/[s((s+2)²+2)]",
+      "1/[s((s-2)²+2)]",
+      "1/[s((s-2)²+1)]"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "The Laplace transform of e^{-t} u(t-2) is:",
+    "options": [
+      "e^{-2(s+1)}/(s+1)",
+      "e^{-2s}/(s+1)",
+      "e^{-2s}/(s-1)",
+      "-e^{-2s}/(s-1)"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "For the function f(t) = { 1-t, 0≤t≤2; 0, t≥2 }, the Laplace transform is:",
+    "options": [
+      "e^{-2s} + [1 + 1/s²]",
+      "(1 - e^{-2s})(1/s + 1/s²)",
+      "e^{-2s} + 1/s²",
+      "None of these"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "If L[y(t)] = Y(s), then L [ t dy/dt ] is equal to:",
+    "options": [
+      "Y(s) - s y'(s)",
+      "y(s) - s Y'(s)",
+      "-Y(s) - s Y'(s)",
+      "-y(s) - s y'(s)"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "If f(t) = t cos t, then L [ ∫₀^t f(t) dt ] is:",
+    "options": [
+      "(s²-1)/[s(s²+2s+2)]",
+      "(s-1)/(s³+2s²+2s)",
+      "(s²-1)/(s²+2s+1)²",
+      "(s-1)/(s³-2s²+2s)"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "The inverse Laplace transform of k e^{-α s}/(s² + k²) is:",
+    "options": [
+      "sin(kt)",
+      "cos(kt)",
+      "H(t-a) sin(kt)",
+      "None of these"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "If f(t) = sin t, then the Laplace transform of its derivative f'(t) is:",
+    "options": [
+      "-1/(1+s²)",
+      "1/(1+s²)",
+      "-2s/(1+s²)²",
+      "2s/(1+s²)²"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "The Laplace transform of the function f(t) = 1 is:",
+    "options": [
+      "1/s, for s > 0",
+      "1/s², for s > 0",
+      "1, for all s",
+      "1/(s-1), for s > 1"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "The inverse Laplace transform of 1/s² is:",
+    "options": [
+      "δ(t)",
+      "u(t)",
+      "t",
+      "t²/2"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "The First Shifting Theorem (First Translation Theorem) states that if L[f(t)] = F(s), then:",
+    "options": [
+      "L[e^{at}f(t)] = F(s - a)",
+      "L[e^{-at}f(t)] = F(s + a)",
+      "L[e^{at}f(t)] = F(s + a)",
+      "L[e^{-at}f(t)] = F(s - a)"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "The Laplace transform of f(t) = cosh(at) is:",
+    "options": [
+      "s/(s² - a²)",
+      "a/(s² - a²)",
+      "s/(s² + a²)",
+      "a/(s² + a²)"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "The function Γ(7/2)/s^{7/2} is the Laplace transform of:",
+    "options": [
+      "t^{7/2}",
+      "t^{5/2}",
+      "t^{3/2}",
+      "t^{9/2}"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "The Laplace transform of the integral ∫₀^t f(τ) dτ is:",
+    "options": [
+      "s F(s)",
+      "F(s)/s",
+      "F(s) - f(0)",
+      "(F(s) - f(0))/s"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "The inverse Laplace transform of 5/(s² + 25) is:",
+    "options": [
+      "cos(5t)",
+      "sin(5t)",
+      "sin(5t)/5",
+      "5 sin(t)"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "The Laplace transform of f(t) = tⁿ, where n is a positive integer, is:",
+    "options": [
+      "n!/sⁿ",
+      "n!/s^{n+1}",
+      "(n-1)!/sⁿ",
+      "1/s^{n+1}"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "The value of L[δ(t)], the Laplace transform of the unit impulse function at zero, is:",
+    "options": [
+      "0",
+      "1",
+      "1/s",
+      "e^{-s}"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "The inverse Laplace transform of e^{-3s}/s² is:",
+    "options": [
+      "(t-3) u(t-3)",
+      "t u(t-3)",
+      "(t-3) δ(t-3)",
+      "t e^{-3t}"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "The Laplace transform of f(t) = e^{-2t} sin(3t) is:",
+    "options": [
+      "3/((s+2)² + 9)",
+      "(s+2)/((s+2)² + 9)",
+      "3/(s²+4)",
+      "s/(s²+4s+13)"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "If two functions f and g are piecewise continuous on [0, ∞), then the convolution (f * g)(t) is defined as:",
+    "options": [
+      "∫₀^t f(τ) g(t-τ) dτ",
+      "∫₀^t f(t-τ) g(τ) dτ",
+      "∫₀^∞ f(τ) g(t) dτ",
+      "Both a and b"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "The Convolution Theorem states that:",
+    "options": [
+      "L[(f * g)(t)] = F(s) + G(s)",
+      "L[(f * g)(t)] = F(s) G(s)",
+      "L[f(t) g(t)] = F(s) * G(s)",
+      "L[f(t) g(t)] = F(s) G(s)"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "The inverse Laplace transform of s/((s² + a²)²) is:",
+    "options": [
+      "t sin(at)/(2a)",
+      "t cos(at)/2",
+      "(sin(at) - at cos(at))/(2a)",
+      "t sinh(at)/(2a)"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "The Laplace transform of f(t) = 1/√(πt) is:",
+    "options": [
+      "1/√s",
+      "1/s",
+      "√s",
+      "1/(s√s)"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "The solution procedure for a linear differential equation using Laplace transforms involves:",
+    "options": [
+      "Transforming the DE into an algebraic equation, solving it, and then finding the inverse transform.",
+      "Integrating the DE directly and then applying the initial conditions.",
+      "Finding the complementary function and particular integral.",
+      "Using the method of variation of parameters."
+    ],
+    "answer": 0
+  },
+  {
+    "question": "The Laplace transform of the second derivative y''(t) incorporates the initial conditions:",
+    "options": [
+      "y(0) only",
+      "y'(0) only",
+      "Both y(0) and y'(0)",
+      "Neither y(0) nor y'(0)"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "The function s/(s² - 9) is the Laplace transform of:",
+    "options": [
+      "cos(3t)",
+      "sin(3t)",
+      "cosh(3t)",
+      "sinh(3t)"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "The inverse Laplace transform of 1/[s(s² + 1)] can be found using:",
+    "options": [
+      "Partial fractions",
+      "The convolution theorem",
+      "Completing the square",
+      "Either a or b"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "The Laplace transform is particularly useful for solving differential equations because it:",
+    "options": [
+      "Always gives a real-valued solution.",
+      "Handles initial value problems by incorporating initial conditions automatically.",
+      "Can only be used for linear equations with constant coefficients.",
+      "Is simpler than all other methods."
+    ],
+    "answer": 1
+  },
+  {
+    "question": "The Laplace transform of a constant function f(t) = c is:",
+    "options": [
+      "c/s",
+      "c/s²",
+      "c",
+      "c e^{-s}"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "The function F(s) = (2s+5)/(s²+4s+13) can be inverted by first:",
+    "options": [
+      "Using partial fractions",
+      "Completing the square in the denominator",
+      "Applying the derivative of a transform property",
+      "Using the convolution integral"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "The Laplace transform of f(t) = u(t - a), the unit step function, is:",
+    "options": [
+      "e^{-as}/a",
+      "e^{-as}/s",
+      "e^{as}/s",
+      "1/(s - a)"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "The inverse Laplace transform of e^{-s}/(s + 2) is:",
+    "options": [
+      "e^{-2(t-1)} u(t-1)",
+      "e^{-2t} u(t-1)",
+      "e^{-2(t+1)} u(t)",
+      "e^{-2t} δ(t-1)"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "The Laplace transform of f(t) = t e^{at} is:",
+    "options": [
+      "1/(s - a)²",
+      "1/(s + a)²",
+      "s/(s - a)²",
+      "a/(s - a)²"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "The initial value theorem states that lim_{t→0⁺} f(t) = :",
+    "options": [
+      "lim_{s→0} s F(s)",
+      "lim_{s→∞} s F(s)",
+      "lim_{s→0} F(s)",
+      "lim_{s→∞} F(s)"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "The final value theorem states that lim_{t→∞} f(t) = , provided the limits exist:",
+    "options": [
+      "lim_{s→0} s F(s)",
+      "lim_{s→∞} s F(s)",
+      "lim_{s→0} F(s)",
+      "lim_{s→∞} F(s)"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "The Laplace transform of f(t) = d/dt(sin t) is:",
+    "options": [
+      "s/(s²+1)",
+      "1/(s²+1)",
+      "-s/(s²+1)²",
+      "2s/(s²+1)²"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "The function F(s) = ln(s/(s+1)) can be inverted using the property:",
+    "options": [
+      "L[t f(t)] = -d/ds F(s)",
+      "L[f(t)/t] = ∫_s^∞ F(u) du",
+      "L[e^{-t}f(t)] = F(s+1)",
+      "The convolution theorem"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "The Laplace transform of f(t) = sin(at + b) is:",
+    "options": [
+      "(a cos b + s sin b)/(s²+a²)",
+      "(s sin b - a cos b)/(s²+a²)",
+      "(s cos b + a sin b)/(s²+a²)",
+      "(a sin b + s cos b)/(s²+a²)"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "The inverse Laplace transform of 1/(s² - 4s + 8) is found by:",
+    "options": [
+      "Partial fractions",
+      "Completing the square: (s-2)² + 4",
+      "Completing the square: (s-2)² + 2",
+      "Using the derivative property"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "The Laplace transform is a linear operation. This means:",
+    "options": [
+      "L[f(t) + g(t)] = L[f(t)] + L[g(t)]",
+      "L[c f(t)] = c L[f(t)]",
+      "Both a and b",
+      "L[f(t) g(t)] = L[f(t)] L[g(t)]"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "The function f(t) = Σ_{n=0}^∞ δ(t - nT) represents:",
+    "options": [
+      "A sinusoidal wave",
+      "A square wave",
+      "An impulse train",
+      "A decaying exponential"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "The Laplace transform of the function in question 87 is:",
+    "options": [
+      "1/(1 - e^{-Ts})",
+      "1/(1 + e^{-Ts})",
+      "1/(1 - e^{Ts})",
+      "1/[s(1 - e^{-Ts})]"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "The Laplace transform of f(t) = erfc(a/(2√t)) (the complementary error function) is:",
+    "options": [
+      "(1/s) e^{-a√s}",
+      "(1/s) e^{a√s}",
+      "e^{-a√s}",
+      "(1/√s) e^{-a√s}"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "The unit step function u(t - a) is used to:",
+    "options": [
+      "Represent a sudden jump in a function at t = a",
+      "Turn another function 'on' at time t = a",
+      "Write piecewise functions in a single line",
+      "All of the above"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "The inverse Laplace transform of s/((s² + 4)²) is:",
+    "options": [
+      "(1/4) t sin(2t)",
+      "(1/2) t cos(2t)",
+      "(1/4) sin(2t)",
+      "(1/2) sin(2t)"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "The Laplace transform of f(t) = J₀(at), the Bessel function of the first kind of order zero, is:",
+    "options": [
+      "1/√(s² + a²)",
+      "1/(s + a)",
+      "1/√(s² - a²)",
+      "a/(s² + a²)"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "The function Γ(n) (Gamma function) for a positive integer n is equal to:",
+    "options": [
+      "n!",
+      "(n-1)!",
+      "n • (n-1)!",
+      "1/n!"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "The Laplace transform of f(t) = 1/√t is:",
+    "options": [
+      "√(π/s)",
+      "√π / s",
+      "π / √s",
+      "1 / √(π s)"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "The inverse Laplace transform of (1/s) e^{-1/s} is:",
+    "options": [
+      "J₀(2√t)",
+      "I₀(2√t) (Modified Bessel function)",
+      "u(t - 1)",
+      "δ(t - 1)"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "The Laplace transform of the integral ∫₀^t sin(τ) dτ is:",
+    "options": [
+      "1/[s(s² + 1)]",
+      "1/(s² + 1)",
+      "s/(s² + 1)",
+      "(1/s) • (1/(s² + 1))"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "The function F(s) = s/[(s²+1)(s²+4)] can be inverted using:",
+    "options": [
+      "Partial fractions",
+      "The convolution theorem with cos t and cos 2t",
+      "Trigonometric identities",
+      "All of the above"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "The Laplace transform method is most effective for solving:",
+    "options": [
+      "Nonlinear differential equations",
+      "Partial differential equations",
+      "Linear ordinary differential equations with constant coefficients",
+      "Differential equations with variable coefficients"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "The inverse Laplace transform of 1/[s² (s² + a²)] is:",
+    "options": [
+      "t/a - sin(at)/a²",
+      "t/a² - sin(at)/a³",
+      "t/a³ - sin(at)/a²",
+      "t - (1/a) sin(at)"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "The primary reason for using the Laplace transform in engineering is to:",
+    "options": [
+      "Analyze the frequency response of a system.",
+      "Convert a differential equation into an easier algebraic problem.",
+      "Find the particular solution of a differential equation.",
+      "Calculate the work done by a force."
+    ],
+    "answer": 1
+  },
+
   {
     question: "What is the relationship between the Beta and Gamma functions as proven in the document?",
     options: [
@@ -1810,408 +3313,535 @@ const questions = [
     });
   }
 
-  // UI Elements
-  const questionNav = document.getElementById('question-nav');
-  const startScreen = document.getElementById('start-screen');
-  const startQuizBtn = document.getElementById('start-quiz-btn');
-  const quizContainer = document.getElementById('quiz-container');
-  const resultContainer = document.getElementById('result-container');
-  const app = document.getElementById('app');
-  const timerEl = document.getElementById('timer');
-  const questionNumberEl = document.getElementById('question-number');
-  const questionTextEl = document.getElementById('question-text');
-  const optionsContainer = document.getElementById('options-container');
-  const prevBtn = document.getElementById('prev-btn');
-  const nextBtn = document.getElementById('next-btn');
-  const submitBtn = document.getElementById('submit-btn');
-  const scoreEl = document.getElementById('score');
-  const resultsList = document.getElementById('results-list');
-  const retryBtn = document.getElementById('retry-btn');
-  const customConfirm = document.getElementById('customConfirm');
-  const confirmYes = document.getElementById('confirmYes');
-  const confirmNo = document.getElementById('confirmNo');
-  const reloadConfirm = document.getElementById('reload-confirm');
-  const reloadSubmit = document.getElementById('reload-submit');
-  const reloadCancel = document.getElementById('reload-cancel');
-
-  // Question count elements
-  const questionCountInput = document.getElementById('question-count');
-  const countSlider = document.getElementById('count-slider');
-  const decreaseBtn = document.getElementById('decrease-btn');
-  const increaseBtn = document.getElementById('increase-btn');
-  const countDisplay = document.getElementById('count-display');
-  const timeEstimate = document.getElementById('time-estimate');
-
-  // Quiz variables
-  let TOTAL_QUESTIONS = 10; // Default value
-  let timeRemaining; // Will be set dynamically based on question count
-  let selectedQuestions = [];
-  let currentQuestionIndex = 0;
-  let userAnswers = [];
-  let timer;
-  let quizInProgress = false;
-
-  // Update question count display
-  function updateCountDisplay() {
-    countDisplay.textContent = `${TOTAL_QUESTIONS} questions`;
-    questionCountInput.value = TOTAL_QUESTIONS;
-    countSlider.value = TOTAL_QUESTIONS;
-    // Show estimated time as 45 seconds per question
-    const totalSeconds = TOTAL_QUESTIONS * 45;
-    const min = Math.floor(totalSeconds / 60);
-    const sec = totalSeconds % 60;
-    let timeStr = '';
-    if (min > 0) {
-      timeStr += `${min} minute${min !== 1 ? 's' : ''}`;
-      if (sec > 0) timeStr += ` ${sec} second${sec !== 1 ? 's' : ''}`;
-    } else {
-      timeStr = `${sec} second${sec !== 1 ? 's' : ''}`;
-    }
-    timeEstimate.textContent = `Estimated time: ${timeStr} (${TOTAL_QUESTIONS} × 45 sec)`;
-  }   
-
-  // Initialize question count controls
-  decreaseBtn.addEventListener('click', () => {
-    if (TOTAL_QUESTIONS > 10) {
-      TOTAL_QUESTIONS = Math.max(10, TOTAL_QUESTIONS - 5);
-      updateCountDisplay();
-    }
-  });
-
-  increaseBtn.addEventListener('click', () => {
-    if (TOTAL_QUESTIONS < 100) {
-      TOTAL_QUESTIONS = Math.min(100, TOTAL_QUESTIONS + 5);
-      updateCountDisplay();
-    }
-  });
-
-  questionCountInput.addEventListener('change', () => {
-    let value = parseInt(questionCountInput.value);
-    if (isNaN(value) || value < 10) value = 10;
-    if (value > 100) value = 100;
-    TOTAL_QUESTIONS = value;
-    updateCountDisplay();
-  });
-
-  countSlider.addEventListener('input', () => {
-    TOTAL_QUESTIONS = parseInt(countSlider.value);
-    updateCountDisplay();
-  });
-
-  // Initialize quiz
-  startQuizBtn.addEventListener('click', () => {
-    startScreen.style.display = 'none';
-    app.style.display = 'flex';
-    initQuiz();
-  });
-
-  function initQuiz() {
-    // Set time limit based on number of questions (45s per question)
-    timeRemaining = TOTAL_QUESTIONS * 45;
-    updateTimerDisplay();
-
-    // Shuffle and pick questions
-    const shuffled = shuffleArray([...questions]);
-    selectedQuestions = shuffled.slice(0, Math.min(TOTAL_QUESTIONS, questions.length));
-
-    currentQuestionIndex = 0;
-    userAnswers = new Array(selectedQuestions.length).fill(null);
-
-    showQuestion();
-
-    prevBtn.disabled = true;
-    nextBtn.disabled = false;
-    submitBtn.disabled = true;
-
-    quizContainer.style.display = 'flex';
-    resultContainer.style.display = 'none';
-
-    startTimer();
-    
-    quizInProgress = true;
-    window.addEventListener('beforeunload', handleBeforeUnload);
-    
-    // Focus on the quiz container for keyboard events
-    document.body.focus();
-  }
-
-  function shuffleArray(array) {
-    for (let i = array.length - 1; i > 0; i--) {
-      const j = Math.floor(Math.random() * (i + 1));
-      [array[i], array[j]] = [array[j], array[i]];
-    }
-    return array;
-  }
-
-  function startTimer() {
-    clearInterval(timer);
-    timer = setInterval(() => {
-      timeRemaining--;
-      updateTimerDisplay();
-      if (timeRemaining <= 0) {
-        clearInterval(timer);
-        finishQuiz();
-      }
-    }, 1000);
-  }
-
-  function updateTimerDisplay() {
-    let min = Math.floor(timeRemaining / 60);
-    let sec = timeRemaining % 60;
-    timerEl.textContent = `Time Left: ${min.toString().padStart(2,'0')}:${sec.toString().padStart(2,'0')}`;
-  }
-
-  function renderQuestionNav() {
-    questionNav.innerHTML = '';
-    selectedQuestions.forEach((_, i) => {
-      const btn = document.createElement('button');
-      btn.textContent = i + 1;
-      if (userAnswers[i] !== null) btn.classList.add('answered');
-      if (i === currentQuestionIndex) btn.classList.add('current');
-      btn.addEventListener('click', () => {
-        currentQuestionIndex = i;
-        showQuestion();
-        renderQuestionNav();
+  // KaTeX rendering function - IMPROVED
+function renderLatex(str) {
+  if (!str || typeof str !== 'string') return str;
+  
+  // Handle both inline $...$ and display $$...$$ math
+  let result = str;
+  
+  // Render display math ($$...$$)
+  result = result.replace(/\$\$(.*?)\$\$/g, (match, latex) => {
+    try {
+      return katex.renderToString(latex, {
+        throwOnError: false,
+        displayMode: true
       });
-      questionNav.appendChild(btn);
-    });
-  }
-
-  function showQuestion() {
-    const q = selectedQuestions[currentQuestionIndex];
-    questionNumberEl.textContent = `Question ${currentQuestionIndex + 1} of ${selectedQuestions.length}`;
-    
-    // Render LaTeX in question
-    questionTextEl.innerHTML = renderLatex(q.question);
-
-    optionsContainer.innerHTML = '';
-
-    q.options.forEach((optionText, i) => {
-      const optionDiv = document.createElement('div');
-      optionDiv.className = 'option';
-      
-      const textSpan = document.createElement('span');
-      textSpan.innerHTML = renderLatex(String.fromCharCode(65 + i) + ". " + optionText);
-      optionDiv.appendChild(textSpan);
-      
-      const keyBadge = document.createElement('div');
-      keyBadge.className = 'key-badge';
-      keyBadge.textContent = String.fromCharCode(65 + i);
-      optionDiv.appendChild(keyBadge);
-
-      if(userAnswers[currentQuestionIndex] === i) {
-        optionDiv.classList.add('selected');
-      }
-
-      optionDiv.addEventListener('click', () => {
-        selectOption(i);
+    } catch (e) {
+      console.error("KaTeX display mode error:", e);
+      return match;
+    }
+  });
+  
+  // Render inline math ($...$)
+  result = result.replace(/\$(.*?)\$/g, (match, latex) => {
+    try {
+      return katex.renderToString(latex, {
+        throwOnError: false,
+        displayMode: false
       });
-
-      optionsContainer.appendChild(optionDiv);
-    });
-
-    prevBtn.disabled = currentQuestionIndex === 0;
-    nextBtn.disabled = currentQuestionIndex === selectedQuestions.length - 1;
-    submitBtn.disabled = userAnswers[currentQuestionIndex] === null;
-
-    renderQuestionNav();
-  }
-
-  function selectOption(optionIndex) {
-    userAnswers[currentQuestionIndex] = optionIndex;
-    
-    Array.from(optionsContainer.children).forEach((optEl, idx) => {
-      optEl.classList.toggle('selected', idx === optionIndex);
-    });
-
-    submitBtn.disabled = false;
-    renderQuestionNav();
-  }
-
-  // Navigation buttons
-  prevBtn.addEventListener('click', () => {
-    if(currentQuestionIndex > 0) {
-      currentQuestionIndex--;
-      showQuestion();
+    } catch (e) {
+      console.error("KaTeX inline mode error:", e);
+      return match;
     }
   });
+  
+  return result;
+}
 
-  nextBtn.addEventListener('click', () => {
-    if(currentQuestionIndex < selectedQuestions.length - 1) {
-      currentQuestionIndex++;
-      showQuestion();
-    }
-  });
-
-  // Submit button shows custom confirmation dialog
-  submitBtn.addEventListener('click', () => {
-    customConfirm.style.display = 'flex';
-  });
-
-  // Confirm dialog buttons
-  confirmYes.addEventListener('click', () => {
-    customConfirm.style.display = 'none';
-    finishQuiz();
-  });
-
-  confirmNo.addEventListener('click', () => {
-    customConfirm.style.display = 'none';
-  });
-
-  // Reload confirmation handlers
-  function handleBeforeUnload(e) {
-    if (quizInProgress) {
-      e.preventDefault();
-      e.returnValue = '';
-      reloadConfirm.style.display = 'flex';
-      return '';
+// Function to render all math expressions in an element
+function renderMathInElement(element) {
+  if (!element) return;
+  
+  // Find all text nodes that contain LaTeX
+  const walker = document.createTreeWalker(
+    element, 
+    NodeFilter.SHOW_TEXT, 
+    null, 
+    false
+  );
+  
+  let nodes = [];
+  let node;
+  while (node = walker.nextNode()) {
+    if (node.textContent.includes('$')) {
+      nodes.push(node);
     }
   }
-
-  reloadSubmit.addEventListener('click', () => {
-    reloadConfirm.style.display = 'none';
-    quizInProgress = false;
-    window.removeEventListener('beforeunload', handleBeforeUnload);
-    finishQuiz();
-    setTimeout(() => {
-      window.location.reload();
-    }, 1000);
+  
+  // Process each node with LaTeX
+  nodes.forEach(node => {
+    const tempDiv = document.createElement('div');
+    tempDiv.innerHTML = renderLatex(node.textContent);
+    
+    // Replace the text node with the rendered HTML
+    if (tempDiv.innerHTML !== node.textContent) {
+      node.parentNode.replaceChild(tempDiv, node);
+    }
   });
+}
 
-  reloadCancel.addEventListener('click', () => {
-    reloadConfirm.style.display = 'none';
-  });
+// UI Elements
+const questionNav = document.getElementById('question-nav');
+const startScreen = document.getElementById('start-screen');
+const startQuizBtn = document.getElementById('start-quiz-btn');
+const quizContainer = document.getElementById('quiz-container');
+const resultContainer = document.getElementById('result-container');
+const app = document.getElementById('app');
+const timerEl = document.getElementById('timer');
+const questionNumberEl = document.getElementById('question-number');
+const questionTextEl = document.getElementById('question-text');
+const optionsContainer = document.getElementById('options-container');
+const prevBtn = document.getElementById('prev-btn');
+const nextBtn = document.getElementById('next-btn');
+const submitBtn = document.getElementById('submit-btn');
+const scoreEl = document.getElementById('score');
+const resultsList = document.getElementById('results-list');
+const retryBtn = document.getElementById('retry-btn');
+const customConfirm = document.getElementById('customConfirm');
+const confirmYes = document.getElementById('confirmYes');
+const confirmNo = document.getElementById('confirmNo');
+const reloadConfirm = document.getElementById('reload-confirm');
+const reloadSubmit = document.getElementById('reload-submit');
+const reloadCancel = document.getElementById('reload-cancel');
 
-  function finishQuiz() {
-    clearInterval(timer);
-    quizContainer.style.display = 'none';
-    resultContainer.style.display = 'flex';
-    
-    quizInProgress = false;
-    window.removeEventListener('beforeunload', handleBeforeUnload);
+// Question count elements
+const questionCountInput = document.getElementById('question-count');
+const countSlider = document.getElementById('count-slider');
+const decreaseBtn = document.getElementById('decrease-btn');
+const increaseBtn = document.getElementById('increase-btn');
+const countDisplay = document.getElementById('count-display');
+const timeEstimate = document.getElementById('time-estimate');
 
-    let correctCount = 0;
-    resultsList.innerHTML = '';
+// Quiz variables
+let TOTAL_QUESTIONS = 10; // Default value
+let timeRemaining; // Will be set dynamically based on question count
+let selectedQuestions = [];
+let currentQuestionIndex = 0;
+let userAnswers = [];
+let timer;
+let quizInProgress = false;
 
-    selectedQuestions.forEach((q, idx) => {
-      const userAnsIndex = userAnswers[idx];
-      const isCorrect = userAnsIndex === q.answer;
-      if (isCorrect) correctCount++;
-
-      const userAnswerText = userAnsIndex !== null ? q.options[userAnsIndex] : 'No Answer';
-      const correctAnswerText = q.options[q.answer];
-
-      const div = document.createElement('div');
-      div.className = 'result-question';
-      div.innerHTML = `
-        <div><strong>Q${idx + 1}:</strong> ${renderLatex(q.question)}</div>
-        <div>Your answer: <span class="${isCorrect ? 'correct' : 'wrong'}">${renderLatex(userAnswerText)}</span></div>
-        ${isCorrect ? '' : `<div>Correct answer: <span class="correct">${renderLatex(correctAnswerText)}</span></div>`}
-      `;
-      resultsList.appendChild(div);
-    });
-
-    scoreEl.textContent = `You answered ${correctCount} out of ${selectedQuestions.length} questions correctly.`;
-    
-    let comment = "";
-    const percentage = Math.round((correctCount / selectedQuestions.length) * 100);
-    
-    if (percentage >= 80) comment = "Excellent work! You have a strong grasp of this material.";
-    else if (percentage >= 60) comment = "Good effort! Review the incorrect answers to improve.";
-    else comment = "Keep studying! Focus on the topics you missed.";
-    
-    scoreEl.innerHTML += `<div style="margin-top:10px;font-weight:normal">${comment}</div>`;
+// Update question count display
+function updateCountDisplay() {
+  countDisplay.textContent = `${TOTAL_QUESTIONS} questions`;
+  questionCountInput.value = TOTAL_QUESTIONS;
+  countSlider.value = TOTAL_QUESTIONS;
+  // Show estimated time as 45 seconds per question
+  const totalSeconds = TOTAL_QUESTIONS * 45;
+  const min = Math.floor(totalSeconds / 60);
+  const sec = totalSeconds % 60;
+  let timeStr = '';
+  if (min > 0) {
+    timeStr += `${min} minute${min !== 1 ? 's' : ''}`;
+    if (sec > 0) timeStr += ` ${sec} second${sec !== 1 ? 's' : ''}`;
+  } else {
+    timeStr = `${sec} second${sec !== 1 ? 's' : ''}`;
   }
+  timeEstimate.textContent = `Estimated time: ${timeStr} (${TOTAL_QUESTIONS} × 45 sec)`;
+}   
 
-  retryBtn.addEventListener('click', () => {
-    initQuiz();
-  });
+// Initialize question count controls
+decreaseBtn.addEventListener('click', () => {
+  if (TOTAL_QUESTIONS > 10) {
+    TOTAL_QUESTIONS = Math.max(10, TOTAL_QUESTIONS - 5);
+    updateCountDisplay();
+  }
+});
 
-  // Toggle mobile menu
-  document.querySelector('.menu-toggle').addEventListener('click', function () {
-    document.querySelector('.nav-links').classList.toggle('show');
-  });
+increaseBtn.addEventListener('click', () => {
+  if (TOTAL_QUESTIONS < 100) {
+    TOTAL_QUESTIONS = Math.min(100, TOTAL_QUESTIONS + 5);
+    updateCountDisplay();
+  }
+});
 
-  // Initialize count display when page loads
+questionCountInput.addEventListener('change', () => {
+  let value = parseInt(questionCountInput.value);
+  if (isNaN(value) || value < 10) value = 10;
+  if (value > 100) value = 100;
+  TOTAL_QUESTIONS = value;
   updateCountDisplay();
+});
 
-  // Keyboard shortcuts - FIXED
-  document.addEventListener('keydown', function(e) {
-    // Don't process keyboard shortcuts if user is typing in an input
-    if (['INPUT', 'TEXTAREA'].includes(document.activeElement.tagName)) return;
-    
-    const key = e.key.toUpperCase();
-    
-    // Handle keyboard shortcuts based on what's visible on screen
-    if (startScreen.style.display !== 'none') {
-      // Start screen is visible
-      if (key === 'ENTER') {
-        e.preventDefault();
-        startQuizBtn.click();
-      }
-      return;
-    }
-    
-    if (customConfirm.style.display === 'flex') {
-      // Custom confirmation dialog is visible
-      if (key === 'Y' || key === 'ENTER') {
-        e.preventDefault();
-        confirmYes.click();
-      } else if (key === 'N' || key === 'ESCAPE') {
-        e.preventDefault();
-        confirmNo.click();
-      }
-      return;
-    }
-    
-    if (reloadConfirm.style.display === 'flex') {
-      // Reload confirmation dialog is visible
-      if (key === 'ENTER') {
-        e.preventDefault();
-        reloadSubmit.click();
-      } else if (key === 'ESCAPE') {
-        e.preventDefault();
-        reloadCancel.click();
-      }
-      return;
-    }
-    
-    if (resultContainer.style.display === 'flex') {
-      // Results screen is visible
-      if (key === 'ENTER' || key === 'R') {
-        e.preventDefault();
-        retryBtn.click();
-      }
-      return;
-    }
-    
-    if (quizContainer.style.display === 'flex' && quizInProgress) {
-      // Quiz is in progress
-      // Option selection (A–E)
-      if (key >= 'A' && key <= 'E') {
-        const optionIndex = key.charCodeAt(0) - 65;
-        const currentOptions = selectedQuestions[currentQuestionIndex]?.options || [];
-        if (optionIndex < currentOptions.length) {
-          e.preventDefault();
-          selectOption(optionIndex);
-        }
-        return;
-      }
+countSlider.addEventListener('input', () => {
+  TOTAL_QUESTIONS = parseInt(countSlider.value);
+  updateCountDisplay();
+});
 
-      // Navigation
-      switch (key) {
-        case 'P':
-          e.preventDefault();
-          if (!prevBtn.disabled) prevBtn.click();
-          break;
-        case 'N':
-          e.preventDefault();
-          if (!nextBtn.disabled) nextBtn.click();
-          break;
-        case 'S':
-          e.preventDefault();
-          if (!submitBtn.disabled) submitBtn.click();
-          break;
-      }
+// Initialize quiz
+startQuizBtn.addEventListener('click', () => {
+  startScreen.style.display = 'none';
+  app.style.display = 'flex';
+  initQuiz();
+});
+
+function initQuiz() {
+  // Set time limit based on number of questions (45s per question)
+  timeRemaining = TOTAL_QUESTIONS * 45;
+  updateTimerDisplay();
+
+  // Shuffle and pick questions
+  const shuffled = shuffleArray([...questions]);
+  selectedQuestions = shuffled.slice(0, Math.min(TOTAL_QUESTIONS, questions.length));
+
+  currentQuestionIndex = 0;
+  userAnswers = new Array(selectedQuestions.length).fill(null);
+
+  showQuestion();
+
+  prevBtn.disabled = true;
+  nextBtn.disabled = false;
+  submitBtn.disabled = true;
+
+  quizContainer.style.display = 'flex';
+  resultContainer.style.display = 'none';
+
+  startTimer();
+  
+  quizInProgress = true;
+  window.addEventListener('beforeunload', handleBeforeUnload);
+  
+  // Focus on the quiz container for keyboard events
+  document.body.focus();
+}
+
+function shuffleArray(array) {
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
+  }
+  return array;
+}
+
+function startTimer() {
+  clearInterval(timer);
+  timer = setInterval(() => {
+    timeRemaining--;
+    updateTimerDisplay();
+    if (timeRemaining <= 0) {
+      clearInterval(timer);
+      finishQuiz();
     }
+  }, 1000);
+}
+
+function updateTimerDisplay() {
+  let min = Math.floor(timeRemaining / 60);
+  let sec = timeRemaining % 60;
+  timerEl.textContent = `Time Left: ${min.toString().padStart(2,'0')}:${sec.toString().padStart(2,'0')}`;
+}
+
+function renderQuestionNav() {
+  questionNav.innerHTML = '';
+  selectedQuestions.forEach((_, i) => {
+    const btn = document.createElement('button');
+    btn.textContent = i + 1;
+    if (userAnswers[i] !== null) btn.classList.add('answered');
+    if (i === currentQuestionIndex) btn.classList.add('current');
+    btn.addEventListener('click', () => {
+      currentQuestionIndex = i;
+      showQuestion();
+      renderQuestionNav();
+    });
+    questionNav.appendChild(btn);
   });
+}
+
+function showQuestion() {
+  const q = selectedQuestions[currentQuestionIndex];
+  questionNumberEl.textContent = `Question ${currentQuestionIndex + 1} of ${selectedQuestions.length}`;
+  
+  // Set question text and render LaTeX
+  questionTextEl.innerHTML = q.question;
+  renderMathInElement(questionTextEl);
+
+  optionsContainer.innerHTML = '';
+
+  q.options.forEach((optionText, i) => {
+    const optionDiv = document.createElement('div');
+    optionDiv.className = 'option';
+    
+    const textSpan = document.createElement('span');
+    textSpan.innerHTML = String.fromCharCode(65 + i) + ". " + optionText;
+    optionDiv.appendChild(textSpan);
+    
+    // Render LaTeX in the option
+    renderMathInElement(textSpan);
+    
+    const keyBadge = document.createElement('div');
+    keyBadge.className = 'key-badge';
+    keyBadge.textContent = String.fromCharCode(65 + i);
+    optionDiv.appendChild(keyBadge);
+
+    if(userAnswers[currentQuestionIndex] === i) {
+      optionDiv.classList.add('selected');
+    }
+
+    optionDiv.addEventListener('click', () => {
+      selectOption(i);
+    });
+
+    optionsContainer.appendChild(optionDiv);
+  });
+
+  prevBtn.disabled = currentQuestionIndex === 0;
+  nextBtn.disabled = currentQuestionIndex === selectedQuestions.length - 1;
+  submitBtn.disabled = userAnswers[currentQuestionIndex] === null;
+
+  renderQuestionNav();
+}
+
+function selectOption(optionIndex) {
+  userAnswers[currentQuestionIndex] = optionIndex;
+  
+  Array.from(optionsContainer.children).forEach((optEl, idx) => {
+    optEl.classList.toggle('selected', idx === optionIndex);
+  });
+
+  submitBtn.disabled = false;
+  renderQuestionNav();
+}
+
+// Navigation buttons
+prevBtn.addEventListener('click', () => {
+  if(currentQuestionIndex > 0) {
+    currentQuestionIndex--;
+    showQuestion();
+  }
+});
+
+nextBtn.addEventListener('click', () => {
+  if(currentQuestionIndex < selectedQuestions.length - 1) {
+    currentQuestionIndex++;
+    showQuestion();
+  }
+});
+
+// Submit button shows custom confirmation dialog
+submitBtn.addEventListener('click', () => {
+  customConfirm.style.display = 'flex';
+});
+
+// Confirm dialog buttons
+confirmYes.addEventListener('click', () => {
+  customConfirm.style.display = 'none';
+  finishQuiz();
+});
+
+confirmNo.addEventListener('click', () => {
+  customConfirm.style.display = 'none';
+});
+
+// Reload confirmation handlers
+function handleBeforeUnload(e) {
+  if (quizInProgress) {
+    e.preventDefault();
+    e.returnValue = '';
+    reloadConfirm.style.display = 'flex';
+    return '';
+  }
+}
+
+reloadSubmit.addEventListener('click', () => {
+  reloadConfirm.style.display = 'none';
+  quizInProgress = false;
+  window.removeEventListener('beforeunload', handleBeforeUnload);
+  finishQuiz();
+  setTimeout(() => {
+    window.location.reload();
+  }, 1000);
+});
+
+reloadCancel.addEventListener('click', () => {
+  reloadConfirm.style.display = 'none';
+});
+
+function finishQuiz() {
+  clearInterval(timer);
+  quizContainer.style.display = 'none';
+  resultContainer.style.display = 'flex';
+  
+  quizInProgress = false;
+  window.removeEventListener('beforeunload', handleBeforeUnload);
+
+  let correctCount = 0;
+  resultsList.innerHTML = '';
+
+  selectedQuestions.forEach((q, idx) => {
+    const userAnsIndex = userAnswers[idx];
+    const isCorrect = userAnsIndex === q.answer;
+    if (isCorrect) correctCount++;
+
+    const userAnswerText = userAnsIndex !== null ? q.options[userAnsIndex] : 'No Answer';
+    const correctAnswerText = q.options[q.answer];
+
+    const div = document.createElement('div');
+    div.className = 'result-question';
+    
+    const questionDiv = document.createElement('div');
+    questionDiv.innerHTML = `<strong>Q${idx + 1}:</strong> ${q.question}`;
+    renderMathInElement(questionDiv);
+    
+    const userAnswerDiv = document.createElement('div');
+    userAnswerDiv.innerHTML = `Your answer: <span class="${isCorrect ? 'correct' : 'wrong'}">${userAnswerText}</span>`;
+    renderMathInElement(userAnswerDiv);
+    
+    div.appendChild(questionDiv);
+    div.appendChild(userAnswerDiv);
+    
+    if (!isCorrect) {
+      const correctAnswerDiv = document.createElement('div');
+      correctAnswerDiv.innerHTML = `Correct answer: <span class="correct">${correctAnswerText}</span>`;
+      renderMathInElement(correctAnswerDiv);
+      div.appendChild(correctAnswerDiv);
+    }
+    
+    resultsList.appendChild(div);
+  });
+
+  scoreEl.textContent = `You answered ${correctCount} out of ${selectedQuestions.length} questions correctly.`;
+  
+  let comment = "";
+  const percentage = Math.round((correctCount / selectedQuestions.length) * 100);
+  
+  if (percentage >= 80) comment = "Excellent work! You have a strong grasp of this material.";
+  else if (percentage >= 60) comment = "Good effort! Review the incorrect answers to improve.";
+  else comment = "Keep studying! Focus on the topics you missed.";
+  
+  scoreEl.innerHTML += `<div style="margin-top:10px;font-weight:normal">${comment}</div>`;
+}
+
+retryBtn.addEventListener('click', () => {
+  initQuiz();
+});
+
+// Toggle mobile menu
+document.querySelector('.menu-toggle').addEventListener('click', function () {
+  document.querySelector('.nav-links').classList.toggle('show');
+});
+
+// Initialize count display when page loads
+updateCountDisplay();
+
+// Keyboard shortcuts - FIXED
+document.addEventListener('keydown', function(e) {
+  // Don't process keyboard shortcuts if user is typing in an input
+  if (['INPUT', 'TEXTAREA'].includes(document.activeElement.tagName)) return;
+  
+  const key = e.key.toUpperCase();
+  
+  // Handle keyboard shortcuts based on what's visible on screen
+  if (startScreen.style.display !== 'none') {
+    // Start screen is visible
+    if (key === 'ENTER') {
+      e.preventDefault();
+      startQuizBtn.click();
+    }
+    return;
+  }
+  
+  if (customConfirm.style.display === 'flex') {
+    // Custom confirmation dialog is visible
+    if (key === 'Y' || key === 'ENTER') {
+      e.preventDefault();
+      confirmYes.click();
+    } else if (key === 'N' || key === 'ESCAPE') {
+      e.preventDefault();
+      confirmNo.click();
+    }
+    return;
+  }
+  
+  if (reloadConfirm.style.display === 'flex') {
+    // Reload confirmation dialog is visible
+    if (key === 'ENTER') {
+      e.preventDefault();
+      reloadSubmit.click();
+    } else if (key === 'ESCAPE') {
+      e.preventDefault();
+      reloadCancel.click();
+    }
+    return;
+  }
+  
+  if (resultContainer.style.display === 'flex') {
+    // Results screen is visible
+    if (key === 'ENTER' || key === 'R') {
+      e.preventDefault();
+      retryBtn.click();
+    }
+    return;
+  }
+  
+  if (quizContainer.style.display === 'flex' && quizInProgress) {
+    // Quiz is in progress
+    // Option selection (A–E)
+    if (key >= 'A' && key <= 'E') {
+      const optionIndex = key.charCodeAt(0) - 65;
+      const currentOptions = selectedQuestions[currentQuestionIndex]?.options || [];
+      if (optionIndex < currentOptions.length) {
+        e.preventDefault();
+        selectOption(optionIndex);
+      }
+      return;
+    }
+
+    // Navigation
+    switch (key) {
+      case 'P':
+        e.preventDefault();
+        if (!prevBtn.disabled) prevBtn.click();
+        break;
+      case 'N':
+        e.preventDefault();
+        if (!nextBtn.disabled) nextBtn.click();
+        break;
+      case 'S':
+        e.preventDefault();
+        if (!submitBtn.disabled) submitBtn.click();
+        break;
+    }
+  }
+});
+
+
+// Add CSS for better math formula display
+const style = document.createElement('style');
+style.textContent = `
+  .katex {
+    font-size: 1.1em !important;
+  }
+  .katex-display {
+    margin: 0.5em 0;
+    overflow-x: auto;
+    overflow-y: hidden;
+  }
+  .katex-display > .katex {
+    display: inline-block;
+    white-space: nowrap;
+  }
+  .option .katex {
+    font-size: 1em !important;
+  }
+`;
+document.head.appendChild(style);
+
+// Initialize KaTeX when page loads
+document.addEventListener('DOMContentLoaded', function() {
+  // Render any math on the start screen
+  renderMathInElement(startScreen);
+});
+
+// Overlay handling
+document.addEventListener("DOMContentLoaded", () => {
+  const overlay = document.createElement("div");
+  overlay.id = "overlay";
+  overlay.innerHTML = `<div>MTH222 Questions Updated more coming </div>`;
+  document.body.appendChild(overlay);
+
+  setTimeout(() => {
+    overlay.classList.add("hidden");
+    setTimeout(() => overlay.remove(), 600); // wait for fade-out then remove
+  }, 3000); // 3 seconds
+});
